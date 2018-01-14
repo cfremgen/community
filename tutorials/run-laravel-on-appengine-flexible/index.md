@@ -120,7 +120,10 @@ Laravel, you need to manually add the `DB_SOCKET` value to
 
         # create a migration for the session table
         php artisan session:table
-        DB_DATABASE=laravel DB_USERNAME=root DB_PASSWORD=YOUR_DB_PASSWORD php artisan migrate --force
+        php artisan cache:table
+        
+        # Run migrations
+        php artisan migrate
 
 1. Modify your `app.yaml` file with the following contents:
 
